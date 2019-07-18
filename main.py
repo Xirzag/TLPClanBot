@@ -1,11 +1,12 @@
 import random
 from TlpMap import TlpMap
 from MapPainter import Painter, Writer
+from TlpMapLoader import create_tlp_map
 
 
 def print_map(tlp_map, battle, attacker_clan=None, victim_clan=None):
     print("Batalla {} -----".format(battle))
-    tlp_map.print()
+    # tlp_map.print()
 
     painter = Painter(tlp_map)
     painter.paint(attacker_clan, victim_clan)
@@ -41,9 +42,11 @@ def do_battle(tlp_map, battle):
 
 
 def __main__():
-    tlp_map = TlpMap([['Yonks', 'Yonks', 'Yonks', 'Yonks'],
+    '''tlp_map = TlpMap([['Yonks', 'Yonks', 'Yonks', 'Yonks'],
                   ['Sixtolo', 'Sixtolo', 'Bananero', 'Bananero'],
-                  ['Sixtolo', 'Sixtolo', 'Crespo', 'Bananero']])
+                  ['Sixtolo', 'Sixtolo', 'Crespo', 'Bananero']])'''
+
+    tlp_map = create_tlp_map('clanesasientos.csv')
 
     battle = 0
     while tlp_map.clans_amount() is not 1:

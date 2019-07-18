@@ -50,8 +50,11 @@ class TlpMap:
         return {'row': pos['row'] + offset['row'], 'col': pos['col'] + offset['col']}
 
     @staticmethod
-    def is_a_table(clan):
+    def is_a_clan(clan):
         return clan is not None
+
+    def is_a_table(self, pos):
+        return self.is_a_clan(self.clan_in(pos['row'], pos['col']))
 
     def dimensions(self):
         return {'rows': len(self.grid), 'cols': len(self.grid[0])}
@@ -63,22 +66,22 @@ class TlpMap:
         for position in clan_positions:
             if position['row'] is not 0:
                 near_clan = self.clan_in_position(TlpMap.position_offset(position, {'row': -1, 'col': 0}))
-                if clan is not near_clan and TlpMap.is_a_table(near_clan) and near_clan not in near_clans:
+                if clan is not near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
                     near_clans.append(near_clan)
 
             if position['col'] is not 0:
                 near_clan = self.clan_in_position(TlpMap.position_offset(position, {'row': 0, 'col': -1}))
-                if clan is not near_clan and TlpMap.is_a_table(near_clan) and near_clan not in near_clans:
+                if clan is not near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
                     near_clans.append(near_clan)
 
             if position['row'] is not dims['rows'] - 1:
                 near_clan = self.clan_in_position(TlpMap.position_offset(position, {'row': 1, 'col': 0}))
-                if clan is not near_clan and TlpMap.is_a_table(near_clan) and near_clan not in near_clans:
+                if clan is not near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
                     near_clans.append(near_clan)
 
             if position['col'] is not dims['cols'] - 1:
                 near_clan = self.clan_in_position(TlpMap.position_offset(position, {'row': 0, 'col': 1}))
-                if clan is not near_clan and TlpMap.is_a_table(near_clan) and near_clan not in near_clans:
+                if clan is not near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
                     near_clans.append(near_clan)
 
         return near_clans

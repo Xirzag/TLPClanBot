@@ -15,8 +15,8 @@ class Painter:
 
     def create_xml(self):
         svg = '''<?xml version="1.0"?>
-        <svg width="450" height="450"
-             viewBox="0 0 450 450"
+        <svg width="1500" height="1500"
+             viewBox="0 0 1500 1500"
              xmlns="http://www.w3.org/2000/svg">
          </svg>
         '''
@@ -24,7 +24,7 @@ class Painter:
 
     @staticmethod
     def random_hsl():
-        return 'hsl({}, 100, 50)'.format(random.randint(0, 360))
+        return 'rgb({}, {}, {})'.format(random.randint(0, 255), random.randint(0, 255),random.randint(0, 255))
 
     def generate_colors(self):
         clan_colors = {}
@@ -40,8 +40,8 @@ class Painter:
         dim = self.map.dimensions()
         for row in range(dim['rows']):
             for col in range(dim['cols']):
-                if self.map.is_a_table({'row': row, 'col': col}):
-                    painted_clan = self.map.clan_in(row, col)
+                painted_clan = self.map.clan_in(row, col)
+                if self.map.is_a_clan(painted_clan):
                     self.xml.insert(0, self.print_table(row, col, painted_clan,
                                                 attacker_clan if painted_clan is victim_clan else None))
 
@@ -52,7 +52,7 @@ class Painter:
         table = '''<rect id="{}" width="{}" height="{}" x="{}" y="{}"
                 style="fill:{};stroke-width:1;stroke:{}"></rect>'''\
             .format('{}-{}'.format(col, row), self.table_dim, self.table_dim,
-                    row * self.table_dim, col * self.table_dim,
+                    col * self.table_dim, row * self.table_dim,
                     self.get_clan_color(clan) if attacker is None else 'url(#attack_pattern)',
                     'white' if attacker is None else self.get_clan_color(attacker))
         return ET.fromstring(table)
