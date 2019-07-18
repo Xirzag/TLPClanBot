@@ -11,6 +11,7 @@ def print_map(tlp_map, battle, attacker_clan=None, victim_clan=None):
     painter = Painter(tlp_map)
     painter.paint(attacker_clan, victim_clan)
     painter.save_png('battle{}'.format(battle + 1))
+    # painter.save_svg('battle{}.svg'.format(battle + 1))
 
     writer = Writer(tlp_map)
     if attacker_clan is None and victim_clan is None:
@@ -22,14 +23,20 @@ def print_map(tlp_map, battle, attacker_clan=None, victim_clan=None):
 
 
 def do_battle(tlp_map, battle):
+    difference_factor = 5
 
-    attacker_clan = tlp_map.clan_in_position(tlp_map.random_table())
-    victim_clan = random.choice(tlp_map.get_near_clans(attacker_clan))
+    while difference_factor > 4:
+        attacker_clan = tlp_map.clan_in_position(tlp_map.random_table())
+        victim_clan = random.choice(tlp_map.get_near_clans(attacker_clan))
+
+        difference_factor = tlp_map.table_amount(victim_clan) / tlp_map.table_amount(attacker_clan)
+
+
 
     print_map(tlp_map, battle, attacker_clan, victim_clan)
 
     victim_table_pos = tlp_map.find_clan_positions(victim_clan)
-    updated_grid = tlp_map.get_grid()
+    updated_grid = tlp_map.get_grid().copy()
 
     for position in victim_table_pos:
         updated_grid[position['row']][position['col']] = attacker_clan
@@ -47,6 +54,8 @@ def __main__():
                   ['Sixtolo', 'Sixtolo', 'Crespo', 'Bananero']])'''
 
     tlp_map = create_tlp_map('clanesasientos.csv')
+
+    Writer.clean()
 
     battle = 0
     while tlp_map.clans_amount() is not 1:

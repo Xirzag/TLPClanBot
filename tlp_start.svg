@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<svg width="1000" height="820"
+     viewBox="0 0 1000 820"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g
+           id="Tables" >
+        </g>
+       <g
+           id="Victim Tables">
+        </g>
+        <g
+           id="Attacker Tables"></g>
+        <g
+           id="Texto"></g>
+  <g id="Words">
+          <rect
+             id="rect21"
+             width="500"
+             height="80"
+             x="250"
+             y="21.38385"
+             style="display:inline;fill:#81c1da;fill-opacity:1;stroke-width:0.26458332" />
+          <text
+             xml:space="preserve"
+             style="color:white;font-style:normal;font-weight:normal;font-size:30px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:white;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="400"
+             y="180"
+             id="text4536"><tspan
+               id="tspan4534"
+               x="420"
+               y="75"
+               style="font-style:italic;color:white;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';fill:#ffffff;stroke-width:0.26458332">ESCENARIO</tspan></text>
+          <text
+             style="font-style:normal;font-weight:normal;font-size:60px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#81c1da;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+             x="0"
+             y="0"
+             id="text4564"
+             transform="rotate(-90)"><tspan
+               id="tspan4562"
+               x="-700"
+               y="530"
+               style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';fill:#81c1da;fill-opacity:1;stroke-width:0.26458332">PASILLO CENTRAL</tspan></text>
+          <image xlink:href="TLP Logo.png" height="200" width="200" x="700" y="700"/>
+        </g>
+    <g  id="Clan Text"></g>
+</svg>

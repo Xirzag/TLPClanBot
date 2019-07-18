@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="escenario_start.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.24748737"
+     inkscape:cx="57.851751"
+     inkscape:cy="737.24009"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="Words"
+     inkscape:label="Words">
+    <rect
+       id="rect21"
+       width="113.20387"
+       height="21.733631"
+       x="47.057659"
+       y="21.38385"
+       style="display:inline;fill:#81c1da;fill-opacity:1;stroke-width:0.26458332" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="72.76004"
+       y="36.103142"
+       id="text4536"><tspan
+         sodipodi:role="line"
+         id="tspan4534"
+         x="72.76004"
+         y="36.103142"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';fill:#ffffff;stroke-width:0.26458332">ESCENARIO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#81c1da;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-156.18788"
+       y="114.46735"
+       id="text4564"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan4562"
+         x="-156.18788"
+         y="114.46735"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';fill:#81c1da;fill-opacity:1;stroke-width:0.26458332">PASILLO CENTRAL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#81c1da;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-112.98244"
+       y="13.868844"
+       id="text4564-2"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan4562-7"
+         x="-112.98244"
+         y="13.868844"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.93888903px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';fill:#81c1da;fill-opacity:1;stroke-width:0.26458332">CAFETERÍA</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="Tables"
+     inkscape:label="Tables"
+     sodipodi:insensitive="true" >
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="Action Tables"
+     inkscape:label="Action Tables"
+     sodipodi:insensitive="true" >
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="Texto"
+     inkscape:label="Texto" ></g>
+</svg>

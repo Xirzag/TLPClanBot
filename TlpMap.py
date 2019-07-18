@@ -9,7 +9,7 @@ class TlpMap:
         clans = []
         for row in self.grid:
             for cell in row:
-                if cell not in clans:
+                if cell not in clans and self.is_a_clan(cell):
                     clans.append(cell)
 
         return clans
@@ -40,7 +40,7 @@ class TlpMap:
         positions = []
         for i, row in enumerate(self.grid):
             for j, cell in enumerate(row):
-                if cell is clan:
+                if cell == clan:
                     positions.append({'row': i, 'col': j})
 
         return positions
@@ -59,29 +59,32 @@ class TlpMap:
     def dimensions(self):
         return {'rows': len(self.grid), 'cols': len(self.grid[0])}
 
+    def table_amount(self, clan):
+        return len(self.find_clan_positions(clan))
+
     def get_near_clans(self, clan):
         clan_positions = self.find_clan_positions(clan)
         near_clans = []
         dims = self.dimensions()
         for position in clan_positions:
-            if position['row'] is not 0:
+            if position['row'] != 0:
                 near_clan = self.clan_in_position(TlpMap.position_offset(position, {'row': -1, 'col': 0}))
-                if clan is not near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
+                if clan != near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
                     near_clans.append(near_clan)
 
-            if position['col'] is not 0:
+            if position['col'] != 0:
                 near_clan = self.clan_in_position(TlpMap.position_offset(position, {'row': 0, 'col': -1}))
-                if clan is not near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
+                if clan != near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
                     near_clans.append(near_clan)
 
-            if position['row'] is not dims['rows'] - 1:
+            if position['row'] != dims['rows'] - 1:
                 near_clan = self.clan_in_position(TlpMap.position_offset(position, {'row': 1, 'col': 0}))
-                if clan is not near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
+                if clan != near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
                     near_clans.append(near_clan)
 
-            if position['col'] is not dims['cols'] - 1:
+            if position['col'] != dims['cols'] - 1:
                 near_clan = self.clan_in_position(TlpMap.position_offset(position, {'row': 0, 'col': 1}))
-                if clan is not near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
+                if clan != near_clan and TlpMap.is_a_clan(near_clan) and near_clan not in near_clans:
                     near_clans.append(near_clan)
 
         return near_clans
