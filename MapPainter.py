@@ -3,8 +3,6 @@ import os
 import random
 import xml.etree.ElementTree as ET
 import os
-import cairosvg
-
 
 class Painter:
     clan_colors = None
@@ -127,7 +125,7 @@ class Painter:
                     stroke_color)
         return ET.fromstring(table)
 
-    def svg_to_png(self, file, output, width=1024, use_inkscape=False):
+    def svg_to_png(self, file, output, width=1024, use_inkscape=True):
         if use_inkscape:
             if os.name == 'nt':
                 cmd = '"C:\Program Files\Inkscape\inkscape" -z -e {1} -w {2} {0}'.format(file, output, width)
@@ -136,6 +134,7 @@ class Painter:
             print(cmd)
             os.system(cmd)
         else:
+            import cairosvg
             cairosvg.svg2png(url=file, write_to=output)
 
     @staticmethod
